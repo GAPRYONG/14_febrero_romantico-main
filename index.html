@@ -1,0 +1,188 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="js/scrollreveal.js"></script>
+    <LINK rel=StyleSheet href="css/main.css" type="text/css" media=screen>
+    <title>love you </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    
+</head>
+
+<body>
+   
+    <style>
+
+        *, *::after,*::before{
+            margin: 0;  
+            padding: 0;
+            -webkit-box-sezing: border-box;
+            -moz-box-sezing: border-box;
+            box-sezing: border-box;
+        }
+        #barracarga{
+            background-color:rgb(255, 255, 255);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            -webkit-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+            z-index:1000;
+        }
+    
+        #cargando{
+            border: 15px solid #ccc;
+            border-top-color: rgb(151, 150, 150);
+            border-radius: 100%;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top:0px;
+            bottom:0px;
+            left:0px;
+            right: 0px;
+            margin:auto;
+            -webkit-animation: rotate  2s linear infinite;
+            animation: rotate  2s linear infinite;
+        }
+        @-webkit-keyframes rotate  {
+            from {-webkit-transform: rotate(0deg);}
+            to {-webkit-transform: rotate(360deg);}
+        }
+    
+    </style>
+    
+    <div id="barracarga"> 
+        
+        <div id="cargando"></div>
+    
+    </div>
+    
+    <script>
+       window.onload = function(){
+          
+            var contenedor = document.getElementById('barracarga');
+            
+            contenedor.style.visibility = 'hidden';
+            
+            contenedor.style.opacity = '0'
+       }
+    </script>
+    
+
+    <div id="container">
+      
+        
+        <div class="saludo">
+            <center>
+                <audio id="demo" src="canon.mp3"></audio>
+                <script>
+                    document.getElementById('demo').play();
+                    document.getElementById('demo').pause()
+                </script>
+                <div>
+                </div>
+                <h1 class="entrada animacion-1"> Hoy tengo algo genial para ti ... </h1>
+                <h2 class="inicio-h1 animacion-2">Hay algo que quiero compartir contigo, mi mejor amiga</h2>
+                <h2 class="inicio-h1 animacion-3"> Vamos a empezar</h2>
+                <h2 class="inicio-h1 animacion-4">¿estas lista para esto?</h2>     
+                <p>
+                    <span class="animacion-5">3..</span>
+                    <span class="animacion-6">2..</span>
+                    <span class="animacion-7">1..</span>
+                </p>
+                <a onclick="cambiar()" id="play"><img src="img/corazon.png" class="animacion-8 img " ></a> 
+
+                </script>              
+            </center>
+        </div>
+    </div>
+    <div id="container2">
+        <div class="saludo2">
+
+            <center>
+                <h1 class="title">Para mi querida Yuun 💙 <br>  <br></h1>
+            </center>
+            <h2  class=""> <span class="typed "></span> </h2>
+        </div>
+       
+    </div>
+    <div id="container3">
+        <div class="saludo2">
+
+            <center>
+                <h1 class="title" style="font-size: 3rem;"> Leonardo <br>  <br></h1>
+            </center>
+            
+        </div>
+       
+    </div>
+    
+    <script>
+        cont1= document.getElementById('container');
+        cont2= document.getElementById('container2');
+        cont3= document.getElementById('container3');
+        cont2.style.display= 'none';
+        cont3.style.display= 'none';
+        
+        function cambiar(){
+            document.getElementById('demo').play();
+            cont1.style.display= 'none';
+            cont2.style.display= 'block';
+            frase1='Desde que apareciste en mi vida, todo cambió de una manera que nunca imaginé... ';
+            frase2 = frase1 + 'No sé si alguna vez te lo dije lo suficiente, pero tú fuiste quien le quitó ese sentimiento de soledad a mi vida, y eso es algo que siempre voy a agradecerte. ';
+            frase3 = frase2 + 'Sé que últimamente has pasado por momentos difíciles y que no hemos hablado tanto como antes ';
+            frase4 = frase3 + 'Y aunque no hayamos estado en contacto como siempre, nunca dejaste de ser mi mejor amiga. <br>';
+            frase5 = frase4 + 'Aunque no importa que cosas no sabia, ';
+            frase6 = frase5 + 'Ver que poco a poco vas recuperando tu brillo me pone contento, y quiero que sepas que, ';
+            frase7 = frase6 + 'sin importar el tiempo o la distancia, aquí sigo para ti.  <br> ';
+            frase8 = frase7 + 'Aunque estemos a kilómetros de distancia, eso nunca ha sido un obstáculo ';
+            frase9 = frase8 + 'Me gusta hablar contigo, compartir y también esos momentos en los que nos ponemos profundos ';
+            frase10 = frase9 + '(aunque a veces no sepamos cómo salir de ahí 😆). <br>';
+            frase11 = frase10 + 'Me alegra haberte encontrado en este mundo tan grande, y quiero que sepas que siempre estaré aquí para ti, así como tú lo has estado para mí. <br>';
+            frase12 = frase11+ 'Gracias por ser mi mejor amiga.  <br>';
+            frase13 = frase12 + 'Gracias por hacer que los días sean menos pesados y las conversaciones más divertidas. Gracias por todo, Yuun. <br>';
+            frase14 = frase13 + 'Con mucho cariño, ';
+            frase15 = frase14 + 'John';
+            const typed = new Typed('.typed', {
+                strings: [frase1, frase2,frase3, frase4, frase5,frase6,frase7,frase8,frase9,
+                        frase10,frase11,frase12,frase13,frase14,frase15
+                    ],
+                typeSpeed: 60,
+                startDelay:2000,
+                cursorChar: '<3',
+            });
+        }
+        function creditos(){
+            cont2.style.display= 'none';
+            cont3.style.display= 'block';
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+
+    </script>
+
+
+
+
+
+    <!-- <script src="js/animaciones-2.js"></script> -->
+    <script src="js/main.js"> </script>
+    <script src="js/animaciones-1.js"> </script>
+    
+    <!-- <footer>
+       
+        <div>
+            Iconos diseñados por:
+            <a href="https://www.freepik.com" title="Freepik">Freepik</a> 
+            from:
+            <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a>
+        </div>
+    </footer> -->
+</body>
+</html>
+<!-- 
+
+
